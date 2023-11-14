@@ -1,0 +1,21 @@
+ #grid-container{
+    border-color: black;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20%;
+ }
+
+ .row .col{
+    border-style: groove;
+    border-color: black;
+    border-width: 2px;
+    height: 90px;
+    width: 90px;
+    background-color: red;
+ }
+
+ .col:hover{
+    background-color: aliceblue;
+ }
