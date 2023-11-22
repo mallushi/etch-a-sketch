@@ -1,6 +1,10 @@
 let gridContainer = document.getElementById('grid-container');
+let gridSize = document.getElementById('size');
 
-let n = prompt("Type a number between 0-64?");
+gridSize.addEventListener('click', function(){
+    let n = prompt("Type a number between 0-64?");
+    gridContainer.innerHTML ='';
+
 let squareSize = 500 / n - 2;
 
 for (i=0; i < n; i++){
@@ -21,3 +25,4 @@ for (i=0; i < n; i++){
     }
     gridContainer.appendChild(squareRow);
 }
+});
