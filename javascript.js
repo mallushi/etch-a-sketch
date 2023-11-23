@@ -1,11 +1,12 @@
 let gridContainer = document.getElementById('grid-container');
 let gridSize = document.getElementById('size');
+let originalSize = 500;
 
 gridSize.addEventListener('click', function(){
-    let n = prompt("Type a number between 0-64?");
+    let n = prompt("Enter a number between 0-100:");
     gridContainer.innerHTML ='';
 
-let squareSize = 500 / n - 2;
+let squareSize = originalSize / n - 2;
 
 for (i=0; i < n; i++){
     let squareRow = document.createElement('div');
@@ -18,7 +19,7 @@ for (i=0; i < n; i++){
         squareCol.style.height = `${squareSize}px`;
 
         squareCol.addEventListener('mouseover', function() {
-            squareCol.style.backgroundColor = 'white';
+            squareCol.style.backgroundColor = 'red';
         })
 
         squareRow.appendChild(squareCol);
